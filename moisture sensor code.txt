@@ -1,0 +1,28 @@
+int b=7;
+
+void setup() {
+
+Serial.begin(9600);
+pinMode(b,OUTPUT);
+
+}
+
+void loop() {
+  int sensorValue=analogRead(A0);
+
+  Serial.println(sensorValue);
+
+ if(600>sensorValue){
+  
+  digitalWrite(b,HIGH);
+  }
+
+  if(600<sensorValue){
+    digitalWrite(b,LOW);
+    }
+  
+  delay(100);
+
+  
+
+}
